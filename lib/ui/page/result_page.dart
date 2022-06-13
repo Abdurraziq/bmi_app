@@ -49,16 +49,31 @@ class ResultPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 24.0),
-                  Text(
-                    "Info",
-                    style: Theme.of(context).textTheme.titleLarge,
+                  const SizedBox(height: 8.0),
+                  Card(
+                    elevation: 0,
+                    shape: const RoundedRectangleBorder(
+                      side: BorderSide(color: Colors.black26),
+                      borderRadius: BorderRadius.all(Radius.circular(16)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Info",
+                            style: Theme.of(context).textTheme.displaySmall,
+                          ),
+                          const SizedBox(height: 8.0),
+                          const Divider(height: 2.0, color: Colors.black26),
+                          const SizedBox(height: 8.0),
+                          Text(bmi.message),
+                        ],
+                      ),
+                    ),
                   ),
                   const SizedBox(height: 8.0),
-                  const Divider(height: 2.0, color: Colors.grey),
-                  const SizedBox(height: 8.0),
-                  Text(bmi.message),
-                  const SizedBox(height: 8.0),
-                  const Divider(height: 2.0, color: Colors.grey),
                 ],
               ),
             ),
